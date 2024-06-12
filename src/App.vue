@@ -19,8 +19,14 @@ export default {
 </script>
 
 <template>
-  <h1> {{ message }} </h1>
   <ProjectCard />
 </template>
 
-<style></style>
+<style>
+body {
+  background-image: url('./assets/layered-peaks-haikei.svg');
+  background-size: cover;
+  background-attachment: fixed;
+  color: rgb(170, 160, 160);
+}
+</style>
