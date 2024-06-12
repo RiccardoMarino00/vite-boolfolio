@@ -6,11 +6,21 @@
                 <h2> {{ project.title }}</h2>
                 <p> {{ project.content }}</p>
                 <a href="#">{{ project.link }}</a>
+                <ul v-if="project.technologies">
+                    <li v-for="technology in project.technologies">
+                        {{ technology.name }}
+                    </li>
+                </ul>
+                <ul v-if="project.type">
+                    <li>{{ project.type.name }}</li>
+
+                </ul>
             </div>
         </div>
     </div>
     <div>
-        <p @click="changePage(n)" v-for="n in lastPage" :key="n"> {{ n }}</p>
+        <p :class="n === currentpage ? 'bg-orange' : 'bg-white'" @click="changePage(n)" v-for="n in lastPage" :key="n">
+            {{ n }}</p>
     </div>
 </template>
 
@@ -53,4 +63,12 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.bg-orange {
+    background-color: orange;
+}
+
+.bg-white {
+    background-color: whitesmoke;
+}
+</style>
