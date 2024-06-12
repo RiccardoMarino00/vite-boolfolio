@@ -1,6 +1,15 @@
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
+
+import AppMain from './components/AppMain.vue'
+
+import ProjectCard from './components/ProjectCard.vue'
+
 export default {
+  components: {
+    AppMain,
+    ProjectCard,
+  },
+
   data() {
     return {
       message: 'Ciao Mondo'
@@ -11,7 +20,7 @@ export default {
 
 <template>
   <h1> {{ message }} </h1>
-  <!-- <HelloWorld msg="Vite + Vue" /> -->
+  <ProjectCard />
 </template>
 
 <style></style>
