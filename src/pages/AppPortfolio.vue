@@ -31,7 +31,14 @@ export default {
     },
     methods: {
         fetchProjects() {
-            axios.get('http://127.0.0.1:8000/api/projects')
+            axios.get('http://127.0.0.1:8000/api/projects',
+                {
+                    params: {
+                        page: this.currentpage,
+
+                    }
+                }
+            )
 
                 .then((res) => {
                     console.log(res.data.results.data)
