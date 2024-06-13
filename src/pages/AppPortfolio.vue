@@ -6,7 +6,8 @@
     </div>
 
     <div class="text-center paginator-div riga-flex">
-        <PaginatorComponent v-for="n in lastPage" :key="n" />
+        <p v-for="n in lastPage" :key="n" :class="n === currentpage ? 'bg-orange190' : 'bg-orange163'"
+            @click="changePage(n)">{{ n }}</p>
     </div>
 
 
@@ -16,7 +17,6 @@
 <script>
 import axios from 'axios'
 import ProjectCard from '../components/ProjectCard.vue'
-import PaginatorComponent from '../components/PaginatorComponent.vue'
 export default {
     data() {
         return {
@@ -27,7 +27,6 @@ export default {
     },
     components: {
         ProjectCard,
-        PaginatorComponent
 
     },
     methods: {
@@ -37,6 +36,7 @@ export default {
                 .then((res) => {
                     console.log(res.data.results.data)
                     this.projects = res.data.results.data
+                    this.lastPage = res.data.results.last_page
                 })
 
         },
