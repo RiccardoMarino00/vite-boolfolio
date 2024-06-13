@@ -1,12 +1,10 @@
 <script>
 
-import AppMain from './components/AppMain.vue'
 
 import ProjectCard from './components/ProjectCard.vue'
 
 export default {
   components: {
-    AppMain,
     ProjectCard,
   },
 
@@ -27,7 +25,6 @@ export default {
 </template> -->
 
 <template>
-  <h1>Hello App!</h1>
   <p>
     <strong>Current route path:</strong> {{ $route.fullPath }}
   </p>
@@ -35,7 +32,6 @@ export default {
     <RouterLink to="/">Go to Home</RouterLink>
     <RouterLink to="contact">Go to contact</RouterLink>
     <RouterLink to="portfolio">Go to portfolio</RouterLink>
-
   </nav>
   <main>
     <RouterView />
