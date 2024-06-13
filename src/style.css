@@ -4,5 +4,19 @@ a {
 }
 
 a:hover{
-    color: rgb(255, 132, 0);
+    color: rgb(255, 255, 255);
+    transition: color 0.5s;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.contenitore {
+    width: 1200px;
+    margin: 0 auto;
+}
+  
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }

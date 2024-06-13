@@ -12,14 +12,34 @@ export default {
 
   data() {
     return {
-      message: 'Ciao Mondo'
+      message: 'Ciao Mondo',
+      projects: [],
+      currentpage: 1,
+      lastPage: null,
+
     }
   }
 }
 </script>
 
+<!-- <template>
+  <AppMain />
+</template> -->
+
 <template>
-  <ProjectCard />
+  <h1>Hello App!</h1>
+  <p>
+    <strong>Current route path:</strong> {{ $route.fullPath }}
+  </p>
+  <nav>
+    <RouterLink to="/">Go to Home</RouterLink>
+    <RouterLink to="contact">Go to contact</RouterLink>
+    <RouterLink to="portfolio">Go to portfolio</RouterLink>
+
+  </nav>
+  <main>
+    <RouterView />
+  </main>
 </template>
 
 <style>
