@@ -5,6 +5,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import AppHome from './pages/AppHome.vue'
 import AppPortfolio from './pages/AppPortfolio.vue'
 import AppContact from './pages/AppContact.vue'
+import AppShowProject from './pages/AppShowProject.vue'
 
 
 
@@ -13,7 +14,9 @@ const router = createRouter({
     routes : [
         {path: '/', component: AppHome},
         {path: '/portfolio', component: AppPortfolio, name: 'portfolio'},
-        {path: '/contact', component: AppContact, name: 'contact'}
+        {path: '/contact', component: AppContact, name: 'contact'},
+        {path: '/portfolio/:slug', component: AppShowProject, name: 'showProject', props: true},
+
     ]
 });
 

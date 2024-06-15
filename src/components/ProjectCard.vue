@@ -7,6 +7,7 @@
         <div class="col-6">
             <p> {{ item.content }}</p>
             <a class="link" href="{{ item.link }}">Go to Repository&#10066;</a>
+            <router-link :to="{ name: 'showProject', params: { slug: item.slug } }">Read more</router-link>
 
             <ul v-if="item.technologies">
                 <li v-for="technology in item.technologies">
