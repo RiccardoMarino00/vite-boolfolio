@@ -56,6 +56,7 @@ export default {
                 })
                 .catch((err) => {
                     console.log(err)
+                    this.$router.push({ name: 'not-found', params: { pathMatch: this.$route.path.substring(1).split('/') } });
                 })
         }
     },

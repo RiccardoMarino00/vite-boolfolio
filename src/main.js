@@ -6,6 +6,7 @@ import AppHome from './pages/AppHome.vue'
 import AppPortfolio from './pages/AppPortfolio.vue'
 import AppContact from './pages/AppContact.vue'
 import AppShowProject from './pages/AppShowProject.vue'
+import AppNotFound from './pages/AppNotFound.vue'
 
 
 
@@ -16,6 +17,7 @@ const router = createRouter({
         {path: '/portfolio', component: AppPortfolio, name: 'portfolio'},
         {path: '/contact', component: AppContact, name: 'contact'},
         {path: '/portfolio/:slug', component: AppShowProject, name: 'showProject', props: true},
+        {path: '/pathMatch(.*)*', component: AppNotFound, name:'not-found'}
 
     ]
 });
