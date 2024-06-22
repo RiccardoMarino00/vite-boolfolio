@@ -1,4 +1,5 @@
 <template>
+    <div class="scroll"></div>
     <div class="contenitore">
         <div class="riga-flex-column">
             <ProjectCard v-for="project in projects" :key="project.id" :item="project" />
@@ -63,4 +64,25 @@ export default {
 
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped>
+.scroll {
+    width: 100%;
+    height: 10px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    scale: 0 1;
+    animation: scroll-watcher linear;
+    animation-timeline: scroll();
+    transform-origin: left;
+}
+
+@keyframes scroll-watcher {
+    to {
+        scale: 1 1;
+    }
+
+}
+</style>
